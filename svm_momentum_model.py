@@ -181,7 +181,7 @@ then calcualting the volatility and momentum array for it. """
 
 """ EJ 01/17/2021: put paths into ini_file"""
 df_index = \
-pd.read_csv("C:\\Users\\Rachel\\Documents\\GitRepo\\s&p500_20year_daily_price_data\\sp500_index.csv")
+pd.read_csv("[part_of_path]\\s&p500_20year_daily_price_data\\sp500_index.csv")
 df_index['date'] = pd.to_datetime(df_index['Date'])
 df_index['adjclose_val'] = df_index['Adj Close']
 df_index = df_index[['date','adjclose_val']].copy()
@@ -318,7 +318,7 @@ print("Proportion of test labels 1: ", test_prop)
 
 ##############################################################################################################
 """EJ 01/12/2021: Below will start the actual training of the SVC and its predictions and evaluations. """
-#TODO Wrap rfflearn into function for handwaving
+#TODO Wrap rfflearn into function
 
 import rfflearn.cpu as rfflearn
 
